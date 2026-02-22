@@ -109,11 +109,11 @@ export class CounterApp extends DDDSuper(I18NMixin(LitElement)) {
       }
 
       .minusButton:focus{
-        background-color: red;
+        background-color: var(--ddd-theme-default-creekTeal);
       }
 
       .minusButton:hover{
-        background-color: red;
+        background-color: var(--ddd-theme-default-creekTeal);
       }
     `];
   }
