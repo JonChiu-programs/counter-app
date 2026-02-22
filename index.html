@@ -21,6 +21,10 @@
       border-radius: var(--ddd-radius-lg);
       font-size: 50px;
     }
+
+    counter-app.red{
+      background-color: red;
+    }
     counter-app:hover {
       box-shadow: var(--ddd-boxShadow-sm);
     }
@@ -28,6 +32,13 @@
       --counter-app-font-size: var(--ddd-font-size-l);
       background-color: var(--ddd-theme-default-beaverBlue);
       color: var(--ddd-primary-17);
+    }
+
+    div.text{
+      padding: 20px;
+      font-size: 50px;
+      text-align: center;
+      overflow: scroll;
     }
   </style>
   <title>counter-app</title>
@@ -38,9 +49,9 @@
     <h1>counter-app</h1>
     <!-- this is going to do whatever the tag's defaults are -->
     <h2>No limits</h2>
-    <counter-app count="0" min="-9999999999999" max="9999999999999"></counter-app>
+    <counter-app count="0" min="-9999999999999" max="9999999999999"><div class = "text">Buttons are not disabled in any way</div></counter-app>
     <h2>Limits applied</h2>
-    <counter-app count="12" min="0" max="23"><div>Limits set to be 0 < x < 23</div></counter-app>
+    <counter-app class = "red" count="21" min="0" max="23"><div class = "text">Buttons are enable within the domain of 0 < x < 23</div></counter-app>
   </div>
   <script type="module" src="./counter-app.js"></script>
 

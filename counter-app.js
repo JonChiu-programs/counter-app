@@ -53,7 +53,9 @@ export class CounterApp extends DDDSuper(I18NMixin(LitElement)) {
     return [super.styles,
     css`
       :host {
-        display: block;
+        height: 570px;
+        width: 800px;
+        display: inline-block;
         color: var(--ddd-theme-primary);
         background-color: var(--ddd-theme-default-beaverBlue);
         font-family: var(--ddd-font-navigation);
@@ -77,29 +79,30 @@ export class CounterApp extends DDDSuper(I18NMixin(LitElement)) {
       }
 
       .number{
+        margin-left: 265px;
         font-size: 200px;
       }
 
       .addButton{
         height: 100px;
-        width: 100px;
+        width: 200px;
         font-size: 65px;
         text-align: center;
         padding-bottom: 10px;
       }
 
       .addButton:focus{
-        background-color: red;
+        background-color: var(--ddd-theme-default-creekTeal);
       }
 
       .addButton:hover{
-        background-color: red;
+        background-color: var(--ddd-theme-default-creekTeal);
       }
 
       .minusButton{
-        margin: 20px;
+        margin-left: 340px;
         height: 100px;
-        width: 100px;
+        width: 200px;
         font-size: 65px;
         text-align: center;
         padding-bottom: 10px;
@@ -154,10 +157,8 @@ updated(changedProperties) {
   }
   if (changedProperties.has('count')) {
     const check = changedProperties.get('count');
-      if(check == 22 || check == 20){
-        if(check != 21){
+      if(check == 21){
           this.makeItRain();
-        }
       }
     // do your testing of the value and make it rain by calling makeItRain
   }
