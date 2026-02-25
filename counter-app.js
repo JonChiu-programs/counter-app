@@ -137,7 +137,7 @@ export class CounterApp extends DDDSuper(I18NMixin(LitElement)) {
       this.count++;
     }
     else{
-      minusButton.disabled = true;
+      addButton.disabled = true;
     }
   }
 
